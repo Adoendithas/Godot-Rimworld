@@ -1,0 +1,41 @@
+Call down, signal up.
+As a general rule, nodes should manage their children, not the other way around. If you’re using get_parent() or get_node(".."), then you’re probably headed for trouble. Node paths like this are brittle, meaning they can break easily. The three main problems with this arrangement:
+	You can’t test a scene independently. If you run the scene by itself or in a test scene that doesn’t have the exact same node setup, get_node() will cause a crash.
+	You can’t change things easily. If you decide to rearrange or redesign your tree, paths will no longer be valid.
+	Ready order is children-first, parent-last. This means that trying to access a parent’s property in a node’s _ready() can fail because the parent isn’t ready yet.
+
+
+Tilemap Coordinates, Account for Camera Position & Zoom!
+https://www.reddit.com/r/godot/comments/1cm6zrk/comment/l2yjwqw/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1
+func _unhandled_input(event: InputEvent) -> void:
+	if event.is_action_pressed("left_click"):
+		assert(event is InputEventMouse)
+		var mouse_position_viewport: Vector2 = event.position
+		var mouse_position_tilemap_local: Vector2 = tile_map.get_global_transform_with_canvas().affine_inverse() * mouse_position_in_viewport
+		mouse_selection = tile_map.local_to_map(mouse_position_tilemap_local)
+		(...)
+
+
+Pathfinding:
+	var from = pathfinding_get_point_id(
+	Vector3i.ZERO
+)
+var to = pathfinding_get_point_id(
+	Vector3i(6, -4, -2)
+)
+var path = astar.get_id_path(from, to)
+var points: Array[Vector3i] = []
+for point_id in path:
+	var point_pos = astar.get_point_position(
+		point_id
+	)
+	points.append(local_to_cube(point_pos))
+print(points.size()) # 7
+print(points)
+# Vector3i(0, 0, 0)
+# Vector3i(1, -1, 0)
+# Vector3i(2, -2, 0)
+# Vector3i(3, -3, 0)
+# Vector3i(4, -4, 0)
+# Vector3i(5, -4, -1)
+# Vector3i(6, -4, -2)

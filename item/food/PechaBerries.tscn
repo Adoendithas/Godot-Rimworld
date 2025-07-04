@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceh71xpgjdf2l"]
+
+[ext_resource type="Texture2D" uid="uid://djxic3rpbgkoe" path="res://sprites/map_assets/berries/berries_trees.png" id="1_th1iv"]
+[ext_resource type="Script" uid="uid://cwjqnr7w7roim" path="res://item/food/Food.gd" id="2_5wwwq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4civ"]
+atlas = ExtResource("1_th1iv")
+region = Rect2(120, 240, 120, 120)
+
+[node name="PechaBerries" type="Sprite2D"]
+texture = SubResource("AtlasTexture_k4civ")
+script = ExtResource("2_5wwwq")
+itemName = "Pecha Beeren"
+nutrition = 0.4
+foodQuality = 1

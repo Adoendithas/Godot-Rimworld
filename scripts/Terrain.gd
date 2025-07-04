@@ -30,13 +30,6 @@ const SourceTerrainTiles: int = 2
 func _ready():
 	super._ready()
 	
-	# Experimentation with the library:
-	#var astar: AStar2D = AStar2D.new()
-	#print(astar)
-	#var from = pathfinding_get_point_id(Vector2i(0, 0))
-	#var to = pathfinding_get_point_id(Vector2i(6, 3))
-	#var path = astar.get_id_path(from, to)
-	
 	# Enable pathfinding
 	pathfinding_enabled = true
 
@@ -53,7 +46,10 @@ func _ready():
 	# Enable debug visualization (optional)
 	# debug_mode = DebugModeFlags.TILES_COORDS | DebugModeFlags.CONNECTIONS
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+# WorldPosition -> Map Coordinates
+#func local_to_map(cords : Vector2):
+	#return cube_to_map(local_to_cube(cords))
+
 func _process(delta):
 	if generateTerrain:
 		generateTerrain = false

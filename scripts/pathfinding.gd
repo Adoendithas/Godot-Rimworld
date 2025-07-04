@@ -11,12 +11,6 @@ var path = []
 var points: Array[Vector2] = []
 
 func _ready():
-	# Ensure connections
-	#if !start:
-		#start = Vector2i(0, 0)
-	#if !end:
-		#end = Vector2i(16, 6)
-	#
 	#request_path(start, end)
 	pass
 	
@@ -26,13 +20,13 @@ func _process(delta):
 		request_path(start, end)
 	
 func _draw():
-	print(points)
 	if len(points) > 0:
 		for i in range(len(points) - 1):
 			draw_line(points[i], points[i+1], Color.PURPLE)
+			print("draw in pathFind.: ", points[i], points[i+1])
 
 
-
+# 2D-Map Coordinates!
 func request_path(start: Vector2i, end: Vector2i):	
 	terrain.pathfinding_generate_points()
 	var from = terrain.pathfinding_get_point_id(start)

@@ -1,11 +1,13 @@
-[gd_scene load_steps=12 format=4 uid="uid://cse2mr8gakip3"]
+[gd_scene load_steps=14 format=4 uid="uid://cse2mr8gakip3"]
 
 [ext_resource type="Texture2D" uid="uid://ddrylpesght3" path="res://tileMap/Terrain 128x128 transparent.png" id="1_sb48q"]
 [ext_resource type="Texture2D" uid="uid://b34jx0wningbd" path="res://tileMap/Terrain 1 - Flat - Black Outline 1px - 128x128 transparent.png" id="2_t88pq"]
 [ext_resource type="Script" uid="uid://di6j5xdvlgf28" path="res://scripts/Terrain.gd" id="3_r0x5m"]
 [ext_resource type="Script" uid="uid://vddtnmrg6n1b" path="res://scripts/pathfinding.gd" id="4_3mrqo"]
 [ext_resource type="Script" uid="uid://bbh3unhb8vb8g" path="res://scripts/camera_controller.gd" id="5_r0x5m"]
-[ext_resource type="PackedScene" uid="uid://bfdicgg2dnyns" path="res://scenes/pawn.tscn" id="5_t88pq"]
+[ext_resource type="PackedScene" uid="uid://bfdicgg2dnyns" path="res://scenes/pika.tscn" id="5_t88pq"]
+[ext_resource type="Script" uid="uid://bchaonfaxdkp7" path="res://scripts/TaskManager.gd" id="8_joorw"]
+[ext_resource type="Script" uid="uid://bjqa167jae06q" path="res://scripts/ItemManager.gd" id="9_2vekm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sc4tv"]
 texture = ExtResource("1_sb48q")
@@ -111,10 +113,19 @@ end = Vector2i(15, 13)
 
 [node name="ZoomingCamera2D" type="Camera2D" parent="."]
 position = Vector2(1655, 1707)
+zoom = Vector2(0.4, 0.4)
 script = ExtResource("5_r0x5m")
 zoomSpeed = 5.0
 minZoom = 0.25
 maxZoom = 1.5
 
 [node name="Pawn" parent="." instance=ExtResource("5_t88pq")]
-position = Vector2(1313, 1551)
+position = Vector2(1022, 1233)
+
+[node name="ItemManager" type="Node" parent="."]
+script = ExtResource("9_2vekm")
+
+[node name="TaskManager" type="Node" parent="."]
+script = ExtResource("8_joorw")
+
+[node name="PathDrawer" type="Node2D" parent="."]

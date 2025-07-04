@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpdfnw3a557xe"]
+
+[ext_resource type="Texture2D" uid="uid://djxic3rpbgkoe" path="res://sprites/map_assets/berries/berries_trees.png" id="1_nb2m6"]
+[ext_resource type="Script" uid="uid://cjvl71m3q3gsq" path="res://scripts/Item.gd" id="2_4o3cn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4civ"]
+atlas = ExtResource("1_nb2m6")
+region = Rect2(0, 0, 120, 120)
+
+[node name="Item" type="Sprite2D"]
+texture = SubResource("AtlasTexture_k4civ")
+script = ExtResource("2_4o3cn")

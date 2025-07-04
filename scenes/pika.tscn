@@ -1,9 +1,27 @@
-[gd_scene load_steps=51 format=3 uid="uid://bfdicgg2dnyns"]
+[gd_scene load_steps=62 format=3 uid="uid://bfdicgg2dnyns"]
 
 [ext_resource type="Script" uid="uid://b2ahwf0bwfiob" path="res://scripts/pawn.gd" id="1_3865y"]
 [ext_resource type="Texture2D" uid="uid://chwesxag0qwqw" path="res://sprites/pikachu/Idle-Anim.png" id="2_018tw"]
 [ext_resource type="Texture2D" uid="uid://ca7ti4iwcuap3" path="res://sprites/pikachu/Walk-Anim.png" id="2_culnp"]
+[ext_resource type="Texture2D" uid="uid://blxg53i13thh5" path="res://sprites/pikachu/Eat-Anim.png" id="2_y1472"]
 [ext_resource type="Texture2D" uid="uid://bl2x86traqxfe" path="res://sprites/pikachu/EventSleep-Anim.png" id="3_018tw"]
+[ext_resource type="Script" uid="uid://bacqyuuqr87y" path="res://scenes/PawnAi.gd" id="5_0gq48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ojbo2"]
+atlas = ExtResource("2_y1472")
+region = Rect2(0, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_otoq7"]
+atlas = ExtResource("2_y1472")
+region = Rect2(24, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvra3"]
+atlas = ExtResource("2_y1472")
+region = Rect2(48, 0, 24, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ycofb"]
+atlas = ExtResource("2_y1472")
+region = Rect2(72, 0, 24, 48)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_q7cg3"]
 atlas = ExtResource("2_018tw")
@@ -185,6 +203,23 @@ region = Rect2(96, 160, 32, 40)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_ojbo2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_otoq7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvra3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ycofb")
+}],
+"loop": true,
+"name": &"eat",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_q7cg3")
 }, {
 "duration": 1.0,
@@ -358,17 +393,82 @@ animations = [{
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3865y"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0gq48"]
+bg_color = Color(0.124407, 0.293191, 0.110077, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y1472"]
+bg_color = Color(0.52, 0.8, 0, 1)
+
+[sub_resource type="Theme" id="Theme_ojbo2"]
+ProgressBar/colors/StyleBoxFlat = Color(0.945098, 0, 0, 1)
+ProgressBar/styles/background = SubResource("StyleBoxFlat_0gq48")
+ProgressBar/styles/fill = SubResource("StyleBoxFlat_y1472")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ojbo2"]
+bg_color = Color(0.62, 0.0806, 0.0806, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_otoq7"]
+bg_color = Color(1, 0.866667, 0, 1)
+
 [node name="Pawn" type="CharacterBody2D"]
 scale = Vector2(4, 4)
 script = ExtResource("1_3865y")
 
 [node name="sprite" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_q7cg3")
-animation = &"idle"
+animation = &"eat"
 autoplay = "idle"
-frame = 2
-frame_progress = 0.422114
+frame_progress = 0.651678
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, -3)
 shape = SubResource("CapsuleShape2D_3865y")
+
+[node name="StaminaBar" type="ProgressBar" parent="."]
+offset_left = -20.0
+offset_top = -38.0
+offset_right = 15.0
+offset_bottom = -32.0
+theme = SubResource("Theme_ojbo2")
+theme_override_styles/background = SubResource("StyleBoxFlat_ojbo2")
+theme_override_styles/fill = SubResource("StyleBoxFlat_otoq7")
+show_percentage = false
+
+[node name="Label" type="Label" parent="StaminaBar"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -8.5
+offset_right = 2.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Food"
+
+[node name="HungerBar" type="ProgressBar" parent="."]
+offset_left = -20.0
+offset_top = -31.0
+offset_right = 15.0
+offset_bottom = -25.0
+theme = SubResource("Theme_ojbo2")
+show_percentage = false
+
+[node name="Label" type="Label" parent="HungerBar"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -2.0
+offset_top = -8.5
+offset_right = 2.0
+offset_bottom = 8.5
+grow_horizontal = 2
+grow_vertical = 2
+text = "Food"
+
+[node name="PawnAi" type="Node" parent="."]
+script = ExtResource("5_0gq48")

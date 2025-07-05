@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k4civ"]
 atlas = ExtResource("1_th1iv")
-region = Rect2(120, 240, 120, 120)
+region = Rect2(720, 120, 120, 120)
 
 [node name="PechaBerries" type="Sprite2D"]
 texture = SubResource("AtlasTexture_k4civ")

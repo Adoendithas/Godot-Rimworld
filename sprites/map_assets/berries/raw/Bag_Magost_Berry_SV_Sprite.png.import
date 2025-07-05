@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gwqio5r7826n"
-path="res://.godot/imported/120px-ChestoTreeSproutVI_XY.png-803aae403312fc0534867c261ec19456.ctex"
+uid="uid://cwk58nd08uyw8"
+path="res://.godot/imported/Bag_Magost_Berry_SV_Sprite.png-45c290c8816e0d0b1ebd352b1225e487.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-ChestoTreeSproutVI_XY.png"
-dest_files=["res://.godot/imported/120px-ChestoTreeSproutVI_XY.png-803aae403312fc0534867c261ec19456.ctex"]
+source_file="res://sprites/map_assets/berries/raw/Bag_Magost_Berry_SV_Sprite.png"
+dest_files=["res://.godot/imported/Bag_Magost_Berry_SV_Sprite.png-45c290c8816e0d0b1ebd352b1225e487.ctex"]
 
 [params]
 

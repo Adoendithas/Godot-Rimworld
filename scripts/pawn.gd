@@ -10,6 +10,7 @@ extends CharacterBody2D
 @export var foodNeed : float = 1 # range: 0-1
 @export var eatSpeed : float = 0.6
 @export var foodNeedDepleteSpeed : float = 0.05
+@export var harvestSkill : float = 1
 
 @export var color: Color
 

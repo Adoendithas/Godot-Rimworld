@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bj73n280wq2vk"
-path="res://.godot/imported/120px-ChestoTreeBuddingVI_XY.png-92cf5b8e93835cd583285479c057d3d1.ctex"
+uid="uid://cd71oywsi51i"
+path="res://.godot/imported/600px-SMUSUM_Rustling_tree.png-0bf337f3ddebe9ce3a517a2cfac9f03b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-ChestoTreeBuddingVI_XY.png"
-dest_files=["res://.godot/imported/120px-ChestoTreeBuddingVI_XY.png-92cf5b8e93835cd583285479c057d3d1.ctex"]
+source_file="res://sprites/map_assets/trees/raw/600px-SMUSUM_Rustling_tree.png"
+dest_files=["res://.godot/imported/600px-SMUSUM_Rustling_tree.png-0bf337f3ddebe9ce3a517a2cfac9f03b.ctex"]
 
 [params]
 

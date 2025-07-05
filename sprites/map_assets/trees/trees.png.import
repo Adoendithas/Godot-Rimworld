@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b5e6x1t6s5477"
-path="res://.godot/imported/120px-ChestoTreeTallerVI_XY.png-663132ecb1e3b9e31ea26aaeb44025d3.ctex"
+uid="uid://cwwtpuuhjjly4"
+path="res://.godot/imported/trees.png-d3fff2f261a707ba4baa19480969d42d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-ChestoTreeTallerVI_XY.png"
-dest_files=["res://.godot/imported/120px-ChestoTreeTallerVI_XY.png-663132ecb1e3b9e31ea26aaeb44025d3.ctex"]
+source_file="res://sprites/map_assets/trees/trees.png"
+dest_files=["res://.godot/imported/trees.png-d3fff2f261a707ba4baa19480969d42d.ctex"]
 
 [params]
 

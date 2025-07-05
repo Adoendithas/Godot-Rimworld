@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cva6lak18tv0q"
-path="res://.godot/imported/Bag_Colbur_Berry_SV_Sprite.png-0a18270c7b2a25cd684b7b8517e65c82.ctex"
+uid="uid://0wyemovvhllo"
+path="res://.godot/imported/ColburTreeBerryVI_XY.png-b90dbba9bfa06386556e514253444140.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/Bag_Colbur_Berry_SV_Sprite.png"
-dest_files=["res://.godot/imported/Bag_Colbur_Berry_SV_Sprite.png-0a18270c7b2a25cd684b7b8517e65c82.ctex"]
+source_file="res://sprites/map_assets/berries/raw/ColburTreeBerryVI_XY.png"
+dest_files=["res://.godot/imported/ColburTreeBerryVI_XY.png-b90dbba9bfa06386556e514253444140.ctex"]
 
 [params]
 

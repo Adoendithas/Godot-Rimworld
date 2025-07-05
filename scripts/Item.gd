@@ -5,6 +5,9 @@ class_name Item
 @export var count : int
 @export var weight : float
 
+@onready var taskManager = $"../../TaskManager"
+@onready var itemManager = $"../../ItemManager"
+
 func _init():
 	add_to_group("Item")
 

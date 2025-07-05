@@ -40,6 +40,22 @@ func sleep():
 	subTask.taskType = TaskType.Sleep
 	subTasks.append(subTask)
 	
+# Walk to by MapCoords
+func walk_to(pos : Vector2i):
+	pass
+	
+func init_harvest_plant_task(target):
+	taskName = "Walk to a plant and harvest"
+	var subTask = Task.new()
+	subTask.taskType = TaskType.WalkTo
+	subTask.targetItem = target
+	subTasks.append(subTask)	
+	
+	subTask = Task.new()
+	subTask.taskType = TaskType.Harvest
+	subTask.targetItem = target
+	subTasks.append(subTask)
+	
 func init_find_and_eat_food_task():
 	taskName = "Find and eat some food"
 	var subTask = Task.new()

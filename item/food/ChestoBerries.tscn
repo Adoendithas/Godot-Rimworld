@@ -5,7 +5,7 @@
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_k4civ"]
 atlas = ExtResource("1_rpsgi")
-region = Rect2(240, 240, 120, 120)
+region = Rect2(720, 0, 120, 120)
 
 [node name="ChestoBerries" type="Sprite2D"]
 texture = SubResource("AtlasTexture_k4civ")

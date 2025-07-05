@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://mt5qe6gbh8ri"
-path="res://.godot/imported/120px-PechaTreeTallerVI_XY.png-de0021a260e2e1ae49644af9170b5d32.ctex"
+uid="uid://7gfyslqq6jcg"
+path="res://.godot/imported/HGSS_Headbutt_Johto.png-b9fcf5fe073e73899901a3d2b1b33bc8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-PechaTreeTallerVI_XY.png"
-dest_files=["res://.godot/imported/120px-PechaTreeTallerVI_XY.png-de0021a260e2e1ae49644af9170b5d32.ctex"]
+source_file="res://sprites/map_assets/trees/raw/HGSS_Headbutt_Johto.png"
+dest_files=["res://.godot/imported/HGSS_Headbutt_Johto.png-b9fcf5fe073e73899901a3d2b1b33bc8.ctex"]
 
 [params]
 

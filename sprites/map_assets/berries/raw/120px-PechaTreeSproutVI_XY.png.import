@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6vidq8kltc5s"
-path="res://.godot/imported/120px-ChestoTreeBloomVI_XY.png-66528873c40c5a5abe792a439f8369f4.ctex"
+uid="uid://tqrqpkmqj4s1"
+path="res://.godot/imported/120px-PechaTreeSproutVI_XY.png-5e52d8bba0f51efe256de014c44a7b82.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-ChestoTreeBloomVI_XY.png"
-dest_files=["res://.godot/imported/120px-ChestoTreeBloomVI_XY.png-66528873c40c5a5abe792a439f8369f4.ctex"]
+source_file="res://sprites/map_assets/berries/raw/120px-PechaTreeSproutVI_XY.png"
+dest_files=["res://.godot/imported/120px-PechaTreeSproutVI_XY.png-5e52d8bba0f51efe256de014c44a7b82.ctex"]
 
 [params]
 

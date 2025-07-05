@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ddix2b18nhtiq"
-path="res://.godot/imported/Bag_Kasib_Berry_SV_Sprite.png-090616e81269c32dfecac146fc20b229.ctex"
+uid="uid://b6vidq8kltc5s"
+path="res://.godot/imported/120px-ChestoTreeBloomVI_XY.png-1458398f84f9975952c740ff9a7ce37d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/Bag_Kasib_Berry_SV_Sprite.png"
-dest_files=["res://.godot/imported/Bag_Kasib_Berry_SV_Sprite.png-090616e81269c32dfecac146fc20b229.ctex"]
+source_file="res://sprites/map_assets/berries/raw/120px-ChestoTreeBloomVI_XY.png"
+dest_files=["res://.godot/imported/120px-ChestoTreeBloomVI_XY.png-1458398f84f9975952c740ff9a7ce37d.ctex"]
 
 [params]
 

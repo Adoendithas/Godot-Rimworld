@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tqrqpkmqj4s1"
-path="res://.godot/imported/120px-PechaTreeSproutVI_XY.png-5af968886948a2d3e3cb8bfe17e38d4a.ctex"
+uid="uid://mt5qe6gbh8ri"
+path="res://.godot/imported/120px-PechaTreeTallerVI_XY.png-28b0228a970c5d8ca1c114ba27ebc4ca.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-PechaTreeSproutVI_XY.png"
-dest_files=["res://.godot/imported/120px-PechaTreeSproutVI_XY.png-5af968886948a2d3e3cb8bfe17e38d4a.ctex"]
+source_file="res://sprites/map_assets/berries/raw/120px-PechaTreeTallerVI_XY.png"
+dest_files=["res://.godot/imported/120px-PechaTreeTallerVI_XY.png-28b0228a970c5d8ca1c114ba27ebc4ca.ctex"]
 
 [params]
 

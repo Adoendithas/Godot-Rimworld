@@ -28,8 +28,12 @@ func _process(delta: float) -> void:
 		do_current_task(delta)
 	else:
 		# Only for now, relevant only for food tasks!
-		if charController.foodNeed < 0.5 or charController.stamina < 0.3:
-			currentTask = taskManager.request_task(charController.foodNeed, charController.stamina)
+		if charController.stamina < 0.2:
+			currentTask = taskManager.request_sleep()
+		elif charController.foodNeed < 0.5:
+			currentTask = taskManager.request_find_and_eat()
+		else:
+			currentTask = taskManager.request_task()
 		
 func on_pickup_item(item):
 	inHand = item
@@ -50,7 +54,6 @@ func do_current_task(delta):
 				if charController.has_reached_destination():
 					currentTask.on_reached_destination()
 					on_finished_sub_task();
-					
 			Task.TaskType.Eat:
 				if inHand.nutrition > 0 and charController.foodNeed < 1:
 					inHand.nutrition -= charController.eatSpeed * delta
@@ -62,7 +65,6 @@ func do_current_task(delta):
 					inHand = null
 					currentTask.on_finish_sub_task()
 					on_finished_sub_task()
-					
 			Task.TaskType.Sleep:
 				if charController.stamina <= 0.9:
 					charController.stamina += 0.2 * delta
@@ -72,6 +74,13 @@ func do_current_task(delta):
 					print ("finished sleeping")
 					currentTask.on_finish_sub_task()
 					on_finished_sub_task()
+			Task.TaskType.Harvest:
+				var targetItem = currentTask.get_current_sub_task().targetItem
+				if targetItem.try_harvest(charController.harvestSkill * delta):
+					currentTask.on_finish_sub_task()
+					on_finished_sub_task()
+				else:
+					print(targetItem.harvestProgress)
 											
 	
 func start_current_subtask(subTask):
@@ -103,4 +112,8 @@ func start_current_subtask(subTask):
 
 		Task.TaskType.Sleep:
 			print("sleeping")
+			currentAction = PawnAction.DoingSubTask
+
+		Task.TaskType.Harvest:
+			print("harvesting")
 			currentAction = PawnAction.DoingSubTask

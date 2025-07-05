@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctitrjvr5al2d"
-path="res://.godot/imported/Bag_Payapa_Berry_SV_Sprite.png-6c58c682bff37ae9f6172814ff57cdf9.ctex"
+uid="uid://bl52cyl3khhi"
+path="res://.godot/imported/120px-ChestoTreeBiggerVI_XY.png-c690baf35d7e1801946a3a68e9e3c785.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/Bag_Payapa_Berry_SV_Sprite.png"
-dest_files=["res://.godot/imported/Bag_Payapa_Berry_SV_Sprite.png-6c58c682bff37ae9f6172814ff57cdf9.ctex"]
+source_file="res://sprites/map_assets/berries/raw/120px-ChestoTreeBiggerVI_XY.png"
+dest_files=["res://.godot/imported/120px-ChestoTreeBiggerVI_XY.png-c690baf35d7e1801946a3a68e9e3c785.ctex"]
 
 [params]
 

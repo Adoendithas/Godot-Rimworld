@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://sksearj4hyww"]
+
+[ext_resource type="Texture2D" uid="uid://djxic3rpbgkoe" path="res://sprites/map_assets/berries/berries_trees.png" id="1_eskln"]
+[ext_resource type="Script" uid="uid://craim7bvl7au0" path="res://item/plants/Plant.gd" id="2_eskln"]
+[ext_resource type="Script" uid="uid://bb2e62s18wxki" path="res://item/plants/click_target.gd" id="3_jhyiq"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k4civ"]
+atlas = ExtResource("1_eskln")
+region = Rect2(480, 0, 120, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_uflki"]
+size = Vector2(75, 105)
+
+[node name="ChestoTree" type="Sprite2D"]
+texture = SubResource("AtlasTexture_k4civ")
+script = ExtResource("2_eskln")
+harvestItem = "res://item/food/ChestoBerries.tscn"
+
+[node name="ClickTarget" type="Area2D" parent="."]
+script = ExtResource("3_jhyiq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClickTarget"]
+position = Vector2(3.5, 7.5)
+shape = SubResource("RectangleShape2D_uflki")

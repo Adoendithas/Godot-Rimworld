@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ba6wqm0514rgh"
-path="res://.godot/imported/120px-PechaTreeBuddingVI_XY.png-2c44f0333873f2992e78037094c4e9d2.ctex"
+uid="uid://yrpk27etifxc"
+path="res://.godot/imported/Forest_Tree_Ranger_SoA.png-720817e6081d3d02397e821f3ae9fb21.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-PechaTreeBuddingVI_XY.png"
-dest_files=["res://.godot/imported/120px-PechaTreeBuddingVI_XY.png-2c44f0333873f2992e78037094c4e9d2.ctex"]
+source_file="res://sprites/map_assets/trees/raw/Forest_Tree_Ranger_SoA.png"
+dest_files=["res://.godot/imported/Forest_Tree_Ranger_SoA.png-720817e6081d3d02397e821f3ae9fb21.ctex"]
 
 [params]
 

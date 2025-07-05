@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://1l88d76tpgtx"
-path="res://.godot/imported/120px-PechaTreeBloomVI_XY.png-4818350257c20a137115d48b15c5be94.ctex"
+uid="uid://bxxgqjyycpvte"
+path="res://.godot/imported/120px-PechaTreeBerryVI_XY.png-4d816008eb73c92988d7b27fc77f920c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/map_assets/120px-PechaTreeBloomVI_XY.png"
-dest_files=["res://.godot/imported/120px-PechaTreeBloomVI_XY.png-4818350257c20a137115d48b15c5be94.ctex"]
+source_file="res://sprites/map_assets/berries/raw/120px-PechaTreeBerryVI_XY.png"
+dest_files=["res://.godot/imported/120px-PechaTreeBerryVI_XY.png-4d816008eb73c92988d7b27fc77f920c.ctex"]
 
 [params]
 
